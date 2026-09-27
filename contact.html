@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get in Touch | Vertex Data Solutions</title>
+<meta name="description" content="Vertex Data Solutions — independent data analytics and business intelligence consulting in India.">
+<link rel="icon" href="vertex-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="index.html"><img src="vertex-logo.png" alt="Vertex Data Solutions logo"><span>VERTEX DATA SOLUTIONS</span></a>
+<nav><a class="" href="index.html">Home</a>
+<a class="" href="services.html">Services</a>
+<a class="" href="portfolio.html">Portfolio</a>
+<a class="" href="about.html">About</a>
+<a class="active" href="contact.html">Get in Touch</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="container">
+<div class="kicker">GET IN TOUCH</div><h1>Let’s talk about your data</h1>
+<p class="lead">Tell us what you're working with and what you're trying to understand. We'll review your enquiry and get back to you as soon as possible.</p>
+</div></section>
+<section class="section"><div class="container contact-grid">
+<div>
+<h2 style="font-size:28px">Send us an enquiry</h2>
+<form id="contactForm">
+<label for="name">Name</label><input id="name" required placeholder="Your name">
+<label for="email">Email</label><input id="email" type="email" required placeholder="you@company.com">
+<label for="interest">What are you interested in?</label>
+<select id="interest"><option>Data Analytics</option><option>Business Intelligence</option><option>Excel / Power Query</option><option>Power BI Dashboards</option><option>Business Reporting</option><option>Data Consulting</option><option>Other</option></select>
+<label for="message">Tell us about your data challenge</label><textarea id="message" required placeholder="Describe what you're working with and what you're trying to understand..."></textarea>
+<button class="btn" type="submit">Send Enquiry →</button>
+<p class="small">Submitting this form will open your email application with the enquiry prepared for Vertex.</p>
+</form>
+</div>
+<div>
+<h2 style="font-size:28px">A few things to know</h2>
+<div class="info-item"><strong>Response time</strong><p>We review enquiries during business days and respond as soon as possible.</p></div>
+<div class="info-item"><strong>Location</strong><p>We are a remote-first, pan-India venture. We work with businesses across India and are comfortable with fully remote engagements.</p></div>
+<div class="info-item"><strong>Email</strong><p><a class="email" href="mailto:contact@vertexdata.in">contact@vertexdata.in</a></p></div>
+<div class="info-item"><strong>First conversation</strong><p>The first conversation is always free. We'll listen to what you're working with and give you an honest view of how we can help — no obligation.</p></div>
+</div>
+</div></section>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const interest=document.getElementById('interest').value;
+  const message=document.getElementById('message').value.trim();
+  const subject=encodeURIComponent('Vertex Data Solutions enquiry — '+interest);
+  const body=encodeURIComponent('Name: '+name+'\\nEmail: '+email+'\\nService interest: '+interest+'\\n\\nMessage:\\n'+message);
+  window.location.href='mailto:contact@vertexdata.in?subject='+subject+'&body='+body;
+});
+</script>
+</main>
+<footer><div class="container footer-grid">
+<div><div class="footer-brand">VERTEX DATA SOLUTIONS</div><p>Independent data analytics and business intelligence consulting.</p><p class="small">India · Remote B2B Consulting</p></div>
+<div><div class="footer-brand">SERVICES</div><p><a href="services.html">Data Analytics</a><br><a href="services.html">Business Intelligence</a><br><a href="services.html">Reporting & Visualization</a></p></div>
+<div><div class="footer-brand">COMPANY</div><p><a href="about.html">About</a><br><a href="portfolio.html">Portfolio</a><br><a href="contact.html">Get in Touch</a></p></div>
+</div><div class="container" style="margin-top:35px;border-top:1px solid var(--line);padding-top:20px">© 2026 Vertex Data Solutions. All rights reserved.</div></footer>
+</body></html>
